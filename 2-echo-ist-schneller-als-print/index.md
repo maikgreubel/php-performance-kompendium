@@ -4,28 +4,25 @@
 
 Beispiel
 --------
-  <?php
-  $startE = microtime(true);
-  for($i = 0; $i <= 100000; $i++)
-  {
-   echo "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>";
-  }
-  $endE = microtime(true);
-
-
-
-$startP = microtime(true);
-for($i = 0; $i <= 100000; $i++)
-{
-  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
-}
-$endP = microtime(true);
-
-$time2 = $endE - $startE;
-$time1 = $endP - $startP;
-$time3 = $time2 - $time1;
-echo $time1."<br>".$time2."<br>".$time3;
-?>
+	<?php
+	$startE = microtime(true);
+	for($i = 0; $i <= 100000; $i++)
+	{
+	echo "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>";
+	}
+	$endE = microtime(true);
+	$startP = microtime(true);
+	for($i = 0; $i <= 100000; $i++)
+	{
+	  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
+	}
+	$endP = microtime(true);
+	
+	$time2 = $endE - $startE;
+	$time1 = $endP - $startP;
+	$time3 = $time2 - $time1;
+	echo $time1."<br>".$time2."<br>".$time3;
+	?>
 
 Kommentar
 _________
@@ -47,7 +44,7 @@ Anzahl | echo | print | difference
 6  0.153725147247 | 0.230386018753 | 0.0766608715057
 7  0.158454895020 | 0.221489906311 | 0.0630350112915
 8  0.173126935959 | 0.223783969879 | 0.0506570339203
-9  0.161698102951 | 0.239491939545 | 0.0777938365936
+9  0.161698102951 | 0.239491939545 | 0.0777938365936
 10 0.182342052460 | 0.225814819336 | 0.0434727668762
 
 Fazit
