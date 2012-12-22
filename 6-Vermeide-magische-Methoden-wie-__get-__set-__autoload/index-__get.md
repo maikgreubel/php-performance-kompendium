@@ -31,6 +31,8 @@ Beispiel
 	   */
 	  public function __get($name)
 	  {
+		if(!property_exists(get_called_class(), $name))
+			throw new Exception("Property '$name' does not exist");
 		return $this->$name;
 	  }
 
@@ -84,26 +86,26 @@ Auch wenn wir den ersten Lauf als Ausreiser vernachlässigen (dem Caching geschu
 
 Ergebnis
 --------
-	Zeit Zugriff über magische Methode __get: 0.00003386
-	Zeit Zugriff über Getter-Methode: 0.00001097
+	Zeit Zugriff über magische Methode __get: 0.00003600
+	Zeit Zugriff über Getter-Methode: 0.00001287
+	Zeit Zugriff über magische Methode __get: 0.00000691
+	Zeit Zugriff über Getter-Methode: 0.00000286
+	Zeit Zugriff über magische Methode __get: 0.00000596
+	Zeit Zugriff über Getter-Methode: 0.00000191
+	Zeit Zugriff über magische Methode __get: 0.00000620
+	Zeit Zugriff über Getter-Methode: 0.00000215
 	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000405
+	Zeit Zugriff über Getter-Methode: 0.00000310
+	Zeit Zugriff über magische Methode __get: 0.00000596
+	Zeit Zugriff über Getter-Methode: 0.00003195
+	Zeit Zugriff über magische Methode __get: 0.00000620
+	Zeit Zugriff über Getter-Methode: 0.00000310
 	Zeit Zugriff über magische Methode __get: 0.00000596
 	Zeit Zugriff über Getter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000286
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000286
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __get: 0.00000501
-	Zeit Zugriff über Getter-Methode: 0.00000405
 	Zeit Zugriff über magische Methode __get: 0.00000596
-	Zeit Zugriff über Getter-Methode: 0.00000310
+	Zeit Zugriff über Getter-Methode: 0.00000215
+	Zeit Zugriff über magische Methode __get: 0.00000596
+	Zeit Zugriff über Getter-Methode: 0.00000191
 
 
 Fazit
