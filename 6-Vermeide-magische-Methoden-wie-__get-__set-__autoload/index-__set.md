@@ -7,7 +7,7 @@ Beispiel
 
 	<?php
 	/**
-	 * Klasse zum testen von magischen und dedizierten Gettern
+	 * Klasse zum testen von magischen und dedizierten Settern
 	 */
 	class Settest
 	{
@@ -39,9 +39,6 @@ Beispiel
 	
 	$zeiten = array();
 	
-	/* Die Geschäfs-Ausgaben interessieren uns hier nicht */
-	ob_start();
-	
 	/* Wir testen den gleichen Ablauf 10 mal */
 	for($i = 0; $i < 10; $i++)
 	{
@@ -62,9 +59,6 @@ Beispiel
 		$zeiten[] = sprintf("Zeit Zugriff über Setter-Methode: %1.8f\n", ($e-$s));
 	}
 	
-	/* Wir verwerfen die Geschäftsausgabe */
-	ob_end_clean();
-	
 	/* Resultate anzeigen */
 	foreach($zeiten as $zeit) echo $zeit;
 
@@ -76,7 +70,7 @@ Innerhalb der magischen Methode __set() können die Zugriffe auf die lokalen Kla
 Performance
 -----------
 
-Auch wenn wir den ersten Lauf als Ausreiser vernachlässigen (dem Caching geschuldet), ist der Zugriff über die magische set()-Methode tatsächlich etwas langsamer. Wenn man jetzt noch Business-Code dazu denkt, der Zugriffssteuerung übernimmt - um das gleiche Verhalten wie eine dedizierte Set-Methode für Settest::_a zu simulieren, wird die tatsächliche Laufzeit nochmals erhöht.
+Auch wenn wir den ersten Lauf als Ausreiser vernachlässigen (dem Caching geschuldet), ist der Zugriff über die magische set()-Methode tatsächlich etwas langsamer. Man könnte in der magischen __set()-Methode die Prüfung auf die Existenz der lokalen Mitgliedsvariablen weg lassen und würde dennoch langsamer sein.
 
 Ergebnis
 --------
