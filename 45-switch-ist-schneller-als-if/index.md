@@ -1,5 +1,5 @@
 ----
-43. scwitch ist schneller als if 
+43. switch ist schneller als if 
 ----
 
 Beispiel
