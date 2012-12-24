@@ -1,5 +1,5 @@
 ----
-13. scwitch ist schneller als if 
+43. scwitch ist schneller als if 
 ----
 
 Beispiel
@@ -109,7 +109,7 @@ Ergebnis
 	8 | 9.53674316406E-7 | 9.53674316406E-7 | 0
 	9 | 9.53674316406E-7 | 9.53674316406E-7 | 0
 	10 | 9.53674316406E-7 | 1.19209289551E-6 | -2.38418579102E-7
-###### Vollständige Daten: siehe data.md
+###### Vollständige Daten: siehe [data.md](data.md,"data.md")
 
 Fazit
 -------
