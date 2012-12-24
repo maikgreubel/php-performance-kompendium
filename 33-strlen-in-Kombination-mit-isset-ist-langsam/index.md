@@ -63,7 +63,7 @@ Ergebnis
 10 | 9.53674316406E-7 | 9.53674316406E-7 | 0
 [...]
 ```
-###### Vollständige Daten: siehe [data.md](data.md,"data.md")
+###### Vollständige Daten: siehe [data.md](data.md)
 
 Fazit
 ------

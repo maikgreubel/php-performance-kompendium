@@ -71,7 +71,7 @@ Ergebnis
 10 | 0.0297329425812 | 0.108931064606 | 0.0791981220245
 [...]
 ```
-###### Vollständige Daten: siehe [data.md](data.md,"data.md")
+###### Vollständige Daten: siehe [data.md](data.md)
 
 Fazit
 ------

@@ -69,7 +69,7 @@ Aufgrund der Messungen ist ein deutlicher Zuwachs an Performance erkennbar. Der 
 
 Ergebnis
 ---------
-siehe [data.md](data.md,"data.md")
+siehe [data.md](data.md)
 
 Fazit
 ------
