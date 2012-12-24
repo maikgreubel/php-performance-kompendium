@@ -4,26 +4,27 @@
 
 Beispiel
 --------
-	<?php
-	$startE = microtime(true);
-	for($i = 0; $i <= 100000; $i++)
-	{
-	echo "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>";
-	}
-	$endE = microtime(true);
-	$startP = microtime(true);
-	for($i = 0; $i <= 100000; $i++)
-	{
-	  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
-	}
-	$endP = microtime(true);
-	
-	$time2 = $endE - $startE;
-	$time1 = $endP - $startP;
-	$time3 = $time2 - $time1;
-	echo $time1."<br>".$time2."<br>".$time3;
-	?>
+```php
+<?php
+$startE = microtime(true);
+for($i = 0; $i <= 100000; $i++)
+{
+echo "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>";
+}
+$endE = microtime(true);
+$startP = microtime(true);
+for($i = 0; $i <= 100000; $i++)
+{
+  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
+}
+$endP = microtime(true);
 
+$time2 = $endE - $startE;
+$time1 = $endP - $startP;
+$time3 = $time2 - $time1;
+echo $time1."<br>".$time2."<br>".$time3;
+?>
+```
 Kommentar
 _________
 Je nach dem wie die PHP-Einstellungen bzw. der Server Hardwaretechnisch ausgestattet ist sind die Werte variabel.
