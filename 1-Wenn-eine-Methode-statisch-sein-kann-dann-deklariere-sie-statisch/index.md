@@ -41,6 +41,7 @@ for($i = 0; $i < 10; $i++)
 foreach($zeiten as $zeit) echo $zeit;
 ?>
 ```
+
 Kommentar
 ---------
 
@@ -49,7 +50,7 @@ Wenn eine Klassen-Methode statisch deklariert ist, bedeutet das nicht, dass man 
 Performance
 -----------
 
-Unterschiedliche Messergebnisse können das prognostizierte Verhalten nicht widergeben. Teilweise ist die statische Variante langsamer als die Instanz-Variante.
+Unterschiedliche Messergebnisse kÃ¶nnen das prognostizierte Verhalten nicht widergeben. Teilweise ist die statische Variante langsamer als die Instanz-Variante.
 
 Ergebnis
 --------

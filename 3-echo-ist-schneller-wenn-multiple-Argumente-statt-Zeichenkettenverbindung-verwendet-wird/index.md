@@ -41,16 +41,17 @@ for($i = 0; $i < 10; $i++)
 foreach($zeiten as $zeit) echo $zeit;
 ?>
 ```
+
 Kommentar
 ---------
 
-echo ist ein in der PHP-Laufzeit direkt implementiertes Konstrukt. Es ist möglich einen oder mehrere Parameter zu übergeben. 
+echo ist ein in der PHP-Laufzeit direkt implementiertes Konstrukt. Es ist mÃ¶glich einen oder mehrere Parameter zu Ã¼bergeben. 
 Zeichenketten-Verbindung wird mit dem Konkatenationsoperator (.) vorgenommen.
 
 Performance
 -----------
 
-Bei Messung mit dem obigen Code konnte die Mehr-Parameter-Lösung tatsächlich schneller abschließen, wie den Resultaten zu entnehmen ist.
+Bei Messung mit dem obigen Code konnte die Mehr-Parameter-LÃ¶sung tatsÃ¤chlich schneller abschlieÃŸen, wie den Resultaten zu entnehmen ist.
 
 Ergebnis
 --------
@@ -77,4 +78,4 @@ Ergebnis
 
 Fazit
 -----
-echo mit mehreren Parametern kann einen geringfügigen Performance-Zuwachs bedeuten. Besonders bei Appliktationen, die von vielen Usern gleichzeitig benutzt wird, kann hier Leistung rausgekitzelt werden.
+echo mit mehreren Parametern kann einen geringfÃ¼gigen Performance-Zuwachs bedeuten. Besonders bei Appliktationen, die von vielen Usern gleichzeitig benutzt wird, kann hier Leistung rausgekitzelt werden.
