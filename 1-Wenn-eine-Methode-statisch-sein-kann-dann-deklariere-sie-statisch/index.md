@@ -4,44 +4,43 @@
 
 Beispiel
 --------
-
-	<?php
-	class calc
+```php
+<?php
+class calc
+{
+	public static function a_plus_b($a, $b)
 	{
-	  public static function a_plus_b($a, $b)
-	  {
 		$c = $a+$b;
 		return $c;
-	  }
 	}
-
-	$zeiten = array();
-
-	for($i = 0; $i < 10; $i++)
-	{
-	  $s = microtime(true);
-	  echo calc::a_plus_b(5, 6) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf ("Zeit statisch 1: %1.5f\n", ($e - $s));
+}
+$zeiten = array();
+for($i = 0; $i < 10; $i++)
+{
+	$s = microtime(true);
+	echo calc::a_plus_b(5, 6) . "\n";
+	$e = microtime(true);
+	$zeiten[] = sprintf ("Zeit statisch 1: %1.5f\n", ($e - $s));
 	
-	  $s = microtime(true);
-	  echo calc::a_plus_b(7, 8) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf ("Zeit statisch 2: %1.5f\n", ($e - $s));
+	$s = microtime(true);
+	echo calc::a_plus_b(7, 8) . "\n";
+	$e = microtime(true);
+	$zeiten[] = sprintf ("Zeit statisch 2: %1.5f\n", ($e - $s));
 	
-	  $s = microtime(true);
-	  $c = new calc();
-	  echo $c->a_plus_b(9, 2) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf ("Zeit instanziiert 1: %1.5f\n", ($e - $s));
+	$s = microtime(true);
+	$c = new calc();
+	echo $c->a_plus_b(9, 2) . "\n";
+	$e = microtime(true);
+	$zeiten[] = sprintf ("Zeit instanziiert 1: %1.5f\n", ($e - $s));
 	
-	  $s = microtime(true);
-	  echo $c->a_plus_b(3, 4) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf ("Zeit instanziiert 2: %1.5f\n", ($e - $s));
-	}
-
-	foreach($zeiten as $zeit) echo $zeit;
+	$s = microtime(true);
+	echo $c->a_plus_b(3, 4) . "\n";
+	$e = microtime(true);
+	$zeiten[] = sprintf ("Zeit instanziiert 2: %1.5f\n", ($e - $s));
+}
+foreach($zeiten as $zeit) echo $zeit;
+?>
+```
 
 Kommentar
 ---------

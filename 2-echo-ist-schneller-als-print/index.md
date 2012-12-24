@@ -4,26 +4,27 @@
 
 Beispiel
 --------
-	<?php
-	$startE = microtime(true);
-	for($i = 0; $i <= 100000; $i++)
-	{
+```php
+<?php
+$startE = microtime(true);
+for($i = 0; $i <= 100000; $i++)
+{
 	echo "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>";
-	}
-	$endE = microtime(true);
-	$startP = microtime(true);
-	for($i = 0; $i <= 100000; $i++)
-	{
-	  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
-	}
-	$endP = microtime(true);
-	
-	$time2 = $endE - $startE;
-	$time1 = $endP - $startP;
-	$time3 = $time2 - $time1;
-	echo $time1."<br>".$time2."<br>".$time3;
-	?>
+}
+$endE = microtime(true);
+$startP = microtime(true);
+for($i = 0; $i <= 100000; $i++)
+{
+  print("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>");
+}
+$endP = microtime(true);
 
+$time2 = $endE - $startE;
+$time1 = $endP - $startP;
+$time3 = $time2 - $time1;
+echo $time1."<br>".$time2."<br>".$time3;
+?>
+```
 Kommentar
 _________
 Je nach dem wie die PHP-Einstellungen bzw. der Server Hardwaretechnisch ausgestattet ist sind die Werte variabel.
@@ -50,4 +51,5 @@ Ergebnis
 Fazit
 ------
 
-Generell würde ich dazu tendieren echo() für die Ausgabe von längeren Strings zu verwenden. Um generell die Ausgabe von Texten mit PHP zu beschleunigen würde ich zusätzlich den Befehl ob_start() verwenden.
+Generell würde ich dazu tendieren echo() für die Ausgabe von längeren Strings zu verwenden. Um generell die Ausgabe von Texten mit PHP zu beschleunigen würde ich zusätzlich den Befehl [ob_start()] [1] verwenden.
+[1]: http://de3.php.net/manual/de/function.ob-start.php "ob_start()"
