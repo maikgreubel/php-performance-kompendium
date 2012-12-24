@@ -4,131 +4,133 @@
 
 Beispiel
 --------
-	<?php
-	$dummy_include = <<< EOT
-	<?php
-	function foo()
+```php
+<?php
+$dummy_include = <<< EOT
+<?php
+function foo()
+{
+	echo 'bar';
+}
+EOT;
+
+$class_file_1 = <<< EOT
+<?php
+class ATest
+{
+	protected \$_aVar;
+
+	public function __construct()
 	{
-		echo 'bar';
+		\$this->_aVar = 'Hallo';
 	}
-	EOT;
-	
-	$class_file_1 = <<< EOT
-	<?php
-	class ATest
+
+	public function getAVar()
 	{
-		protected \$_aVar;
-	
-		public function __construct()
-		{
-			\$this->_aVar = 'Hallo';
-		}
-	
-		public function getAVar()
-		{
-			return \$this->_aVar;
-		}
+		return \$this->_aVar;
 	}
-	EOT;
-	
-	$class_file_2 = <<< EOT
-	<?php
-	class BTest extends ATest
+}
+EOT;
+
+$class_file_2 = <<< EOT
+<?php
+class BTest extends ATest
+{
+	public function __construct()
 	{
-		public function __construct()
-		{
-			\$this->_aVar = ' Welt';
-		}
+		\$this->_aVar = ' Welt';
 	}
-	EOT;
-	
-	$class_file_3 = <<< EOT
-	<?php
-	class CTest
+}
+EOT;
+
+$class_file_3 = <<< EOT
+<?php
+class CTest
+{
+	protected \$_cVar;
+
+	public function __construct()
 	{
-		protected \$_cVar;
-	
-		public function __construct()
-		{
-			\$this->_cVar = 'Hallo';
-		}
-	
-		public function getCVar()
-		{
-			return \$this->_cVar;
-		}
+		\$this->_cVar = 'Hallo';
 	}
-	EOT;
-	
-	$class_file_4 = <<< EOT
-	<?php
-	class DTest extends CTest
+
+	public function getCVar()
 	{
-		public function __construct()
-		{
-			\$this->_cVar = ' Welt';
-		}
+		return \$this->_cVar;
 	}
-	EOT;
-	
-	file_put_contents('dummy.php', $dummy_include);
-	file_put_contents('ATest.php', $class_file_1);
-	file_put_contents('BTest.php', $class_file_2);
-	file_put_contents('CTest.php', $class_file_3);
-	file_put_contents('DTest.php', $class_file_4);
-	
-	/* Damit das Ergebnis nicht durch Initialisierung verfälscht wird */
-	include('dummy.php');
-	
-	function __autoload($class)
+}
+EOT;
+
+$class_file_4 = <<< EOT
+<?php
+class DTest extends CTest
+{
+	public function __construct()
 	{
-		include($class . '.php');
+		\$this->_cVar = ' Welt';
 	}
-	
-	/* Hier startet der Test */
-	$zeiten = array();
-	
-	/* Die Geschäfs-Ausgaben interessieren uns hier nicht */
-	ob_start();
-	
-	/* Test-Teil 1: Manueller include() der benötigten Klassen */
-	$s = microtime(true);
-	
-	include('ATest.php');
-	$AObject = new ATest();
-	echo $AObject->getAVar();
-	
-	include('BTest.php');
-	$BObjekt = new BTest();
-	echo $BObjekt->getAVar();
-	
-	$e = microtime(true);
-	$zeiten[] = sprintf("Zeit expliziter include(): %1.8f\n", ($e-$s));
-	
-	/* Test-Teil 2: Klassen-Include über __autoload() */
-	$s = microtime(true);
-	
-	$CObject = new CTest();
-	echo $CObject->getCVar();
-	
-	$DObject = new DTest();
-	echo $DObject->getCVar();
-	
-	$e = microtime(true);
-	$zeiten[] = sprintf("Zeit mit __autoload(): %1.8f\n", ($e-$s));
-	
-	/* Wir verwerfen die Geschäftsausgabe */
-	ob_end_clean();
-	
-	/* Wieder aufräumen */
-	unlink('dummy.php');
-	unlink('ATest.php');
-	unlink('BTest.php');
-	unlink('CTest.php');
-	unlink('DTest.php');
-	
-	/* Resultate anzeigen */
-	foreach($zeiten as $zeit) echo $zeit;
+}
+EOT;
+
+file_put_contents('dummy.php', $dummy_include);
+file_put_contents('ATest.php', $class_file_1);
+file_put_contents('BTest.php', $class_file_2);
+file_put_contents('CTest.php', $class_file_3);
+file_put_contents('DTest.php', $class_file_4);
+
+/* Damit das Ergebnis nicht durch Initialisierung verfälscht wird */
+include('dummy.php');
+
+function __autoload($class)
+{
+	include($class . '.php');
+}
+
+/* Hier startet der Test */
+$zeiten = array();
+
+/* Die Geschäfs-Ausgaben interessieren uns hier nicht */
+ob_start();
+
+/* Test-Teil 1: Manueller include() der benötigten Klassen */
+$s = microtime(true);
+
+include('ATest.php');
+$AObject = new ATest();
+echo $AObject->getAVar();
+
+include('BTest.php');
+$BObjekt = new BTest();
+echo $BObjekt->getAVar();
+
+$e = microtime(true);
+$zeiten[] = sprintf("Zeit expliziter include(): %1.8f\n", ($e-$s));
+
+/* Test-Teil 2: Klassen-Include über __autoload() */
+$s = microtime(true);
+
+$CObject = new CTest();
+echo $CObject->getCVar();
+
+$DObject = new DTest();
+echo $DObject->getCVar();
+
+$e = microtime(true);
+$zeiten[] = sprintf("Zeit mit __autoload(): %1.8f\n", ($e-$s));
+
+/* Wir verwerfen die Geschäftsausgabe */
+ob_end_clean();
+
+/* Wieder aufräumen */
+unlink('dummy.php');
+unlink('ATest.php');
+unlink('BTest.php');
+unlink('CTest.php');
+unlink('DTest.php');
+
+/* Resultate anzeigen */
+foreach($zeiten as $zeit) echo $zeit;
+```
 
 Kommentar
 ---------

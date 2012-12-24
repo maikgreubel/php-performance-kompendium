@@ -4,42 +4,43 @@
 
 Beispiel
 --------
+```php
+<?php
+/* Hier startet der Test */
+$zeiten = array();
 
-	<?php
-	/* Hier startet der Test */
-	$zeiten = array();
+$var = 'Hallo Welt';
 
-	$var = 'Hallo Welt';
+/* Die Geschäfs-Ausgaben interessieren uns hier nicht */
+ob_start();
 
-	/* Die Geschäfs-Ausgaben interessieren uns hier nicht */
-	ob_start();
+for($i = 0; $i < 10; $i++)
+{
+  /* Test-Teil 1: preg_replace */
+  $s = microtime(true);
+  echo preg_replace('/a/', 'e', $var) . "\n";
+  $e = microtime(true);
+  $zeiten[] = sprintf("Zeit preg_replace: %1.8f\n", ($e-$s));
 
-	for($i = 0; $i < 10; $i++)
-	{
-	  /* Test-Teil 1: preg_replace */
-	  $s = microtime(true);
-	  echo preg_replace('/a/', 'e', $var) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf("Zeit preg_replace: %1.8f\n", ($e-$s));
-  
-	  /* Test-Teil 2: str_replace */
-	  $s = microtime(true);
-	  echo str_replace('a', 'e', $var) . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf("Zeit str_replace: %1.8f\n", ($e-$s));
-  
-	  /* Test-Teil 3: strtr */
-	  $s = microtime(true);
-	  echo strtr($var, 'a', 'e') . "\n";
-	  $e = microtime(true);
-	  $zeiten[] = sprintf("Zeit strtr: %1.8f\n", ($e-$s));
-	}
+  /* Test-Teil 2: str_replace */
+  $s = microtime(true);
+  echo str_replace('a', 'e', $var) . "\n";
+  $e = microtime(true);
+  $zeiten[] = sprintf("Zeit str_replace: %1.8f\n", ($e-$s));
 
-	/* Wir verwerfen die Geschäftsausgabe */
-	ob_end_clean();
+  /* Test-Teil 3: strtr */
+  $s = microtime(true);
+  echo strtr($var, 'a', 'e') . "\n";
+  $e = microtime(true);
+  $zeiten[] = sprintf("Zeit strtr: %1.8f\n", ($e-$s));
+}
 
-	/* Resultate anzeigen */
-	foreach($zeiten as $zeit) echo $zeit;
+/* Wir verwerfen die Geschäftsausgabe */
+ob_end_clean();
+
+/* Resultate anzeigen */
+foreach($zeiten as $zeit) echo $zeit;
+```
 
 Kommentar
 ---------
