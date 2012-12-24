@@ -10,7 +10,7 @@ Beispiel
 $testdata = array();
 for($i = 0; $i < 10000; $i++)
 {
-$testdata[] = $i * 31 ^ ($i-1);
+	$testdata[] = $i * 31 ^ ($i-1);
 }
 
 // Hier startet der Test
@@ -19,7 +19,7 @@ $t = 0;
 $s = microtime(true);
 for($n = 0; $n < count($testdata); $n++)
 {
-$t = $t + $testdata[$n];
+	$t = $t + $testdata[$n];
 }
 $e = microtime(true);
 $zeiten[] = sprintf("Zeit for count max value: %1.5f\n", ($e-$s));
@@ -28,7 +28,7 @@ $t = 0;
 $s = microtime(true);
 for($n = 0, $k = count($testdata); $n < $k; $n++)
 {
-$t = $t + $testdata[$n];
+	$t = $t + $testdata[$n];
 }
 $e = microtime(true);
 $zeiten[] = sprintf("Zeit for fixed max value: %1.5f\n", ($e-$s));

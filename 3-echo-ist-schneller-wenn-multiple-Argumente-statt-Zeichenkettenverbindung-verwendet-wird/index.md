@@ -28,15 +28,15 @@ $zeiten = array();
 
 for($i = 0; $i < 10; $i++)
 {
-$s = microtime(true);
-echo $str1 . " " . $str2 . " " . $str3;
-$e = microtime(true);
-$zeiten[] = sprintf("Zeit echo mit Konkatenation: %1.5f\n", ($e - $s));
-
-$s = microtime(true);
-echo $str1 , " " , $str2 , " " , $str3;
-$e = microtime(true);
-$zeiten[] = sprintf("Zeit echo mit mehreren Parametern: %1.5f\n", ($e - $s));
+	$s = microtime(true);
+	echo $str1 . " " . $str2 . " " . $str3;
+	$e = microtime(true);
+	$zeiten[] = sprintf("Zeit echo mit Konkatenation: %1.5f\n", ($e - $s));
+	
+	$s = microtime(true);
+	echo $str1 , " " , $str2 , " " , $str3;
+	$e = microtime(true);
+	$zeiten[] = sprintf("Zeit echo mit mehreren Parametern: %1.5f\n", ($e - $s));
 }
 foreach($zeiten as $zeit) echo $zeit;
 ?>
