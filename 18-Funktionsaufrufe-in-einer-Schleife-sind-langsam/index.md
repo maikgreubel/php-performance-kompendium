@@ -4,7 +4,7 @@
 
 Beispiel
 ________
-        php
+```php
 	<?php
 	
 	function theCalc($a,$b)
@@ -58,7 +58,7 @@ ________
 	
 	echo "<br>".$tmp['code']." | ".$tmp['func']." | ".$tmp['diff']."<br>";
 	?>
-	
+```	
 Kommentar
 --------
 Ich persönlich bin der Meinung das die Variante mit Funktionsaufruf ist wesentlich übersichtlicher.
