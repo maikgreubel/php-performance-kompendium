@@ -1,5 +1,5 @@
 ----
-33. strlen() vs. isset() zu prüfen einer Stringlänge
+33. strlen() vs. isset() zum prüfen einer Stringlänge
 ---
 Beispiel
 -------
