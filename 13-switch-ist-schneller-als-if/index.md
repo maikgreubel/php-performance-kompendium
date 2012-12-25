@@ -2,4 +2,4 @@
 13. switch() ist schneller als if()
 -----
 
-siehe [Punkt 45](master/45-switch-ist-schneller-als-if/index.md) 
+siehe [Punkt 45](../45-switch-ist-schneller-als-if/index.md) 
