@@ -52,6 +52,7 @@ Die lokale Inkrementation ist ca. 100% schneller.
 
 Ergebnis
 ---------
+#### Anzahl | local_var | obj_property | difference
 ```
 1 | 2.14576721191E-6 | 5.00679016113E-6 | -2.86102294922E-6
 2 | 0 | 9.53674316406E-7 | -9.53674316406E-7
@@ -65,7 +66,7 @@ Ergebnis
 10 | 9.53674316406E-7 | 9.53674316406E-7 | 0
 [...]
 ```
-
+siehe [data.md](data.md)
 Fazit
 -----
 Mit Vorsicht zu genießen.

@@ -39,9 +39,9 @@ Der Performance gewinn liegt bei ca. 20%.
 
 Ergebnis
 -------
-```
-## Anzahl | REQUEST_TIME | time() | difference
 
+#### Anzahl | REQUEST_TIME | time() | difference
+```
 1 | 5.96046447754E-6 | 1.00135803223E-5 | -4.05311584473E-6
 2 | 9.53674316406E-7 | 1.90734863281E-6 | -9.53674316406E-7
 3 | 1.90734863281E-6 | 1.90734863281E-6 | 0
