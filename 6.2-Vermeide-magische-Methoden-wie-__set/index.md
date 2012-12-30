@@ -75,27 +75,8 @@ Auch wenn wir den ersten Lauf als Ausreiser vernachlässigen (dem Caching geschu
 
 Ergebnis
 --------
-	Zeit Zugriff über magische Methode __set: 0.00001812
-	Zeit Zugriff über Setter-Methode: 0.00000596
-	Zeit Zugriff über magische Methode __set: 0.00000596
-	Zeit Zugriff über Setter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __set: 0.00000596
-	Zeit Zugriff über Setter-Methode: 0.00000191
-	Zeit Zugriff über magische Methode __set: 0.00000596
-	Zeit Zugriff über Setter-Methode: 0.00000310
-	Zeit Zugriff über magische Methode __set: 0.00000501
-	Zeit Zugriff über Setter-Methode: 0.00000286
-	Zeit Zugriff über magische Methode __set: 0.00000596
-	Zeit Zugriff über Setter-Methode: 0.00000191
-	Zeit Zugriff über magische Methode __set: 0.00000620
-	Zeit Zugriff über Setter-Methode: 0.00000215
-	Zeit Zugriff über magische Methode __set: 0.00000501
-	Zeit Zugriff über Setter-Methode: 0.00000191
-	Zeit Zugriff über magische Methode __set: 0.00000501
-	Zeit Zugriff über Setter-Methode: 0.00000215
-	Zeit Zugriff über magische Methode __set: 0.00000596
-	Zeit Zugriff über Setter-Methode: 0.00000191
 
+siehe [data.md](data.md)
 
 Fazit
 -----
