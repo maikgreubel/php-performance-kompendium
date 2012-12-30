@@ -180,12 +180,10 @@ Wie zu erwarten war, ist die Verwendung absoluter Pfade die performantestee Vari
 
 Ergebnis
 --------
-	Zeit include() im aktuellen Verzeichnis ohne vollen Pfad: 0.00036716
-	Zeit include() mit absoluten vollen Pfad: 0.00032997
-	Zeit include() im Unterordner über include path: 0.00050187
-	Zeit include() über include path: 0.00057292
 
 Der Test kann leider nicht in einer Schleife ausgeführt werden, da es sonst zu Fehlern wie "Klasse bereits deklariert" kommt.
+
+siehe [data.md](data.md)
 
 Fazit
 -----

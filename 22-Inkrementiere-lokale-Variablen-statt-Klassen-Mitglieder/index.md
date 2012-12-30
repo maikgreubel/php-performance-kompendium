@@ -58,9 +58,7 @@ wie im Referenz-Artikel beschrieben, ist der Zugriff auf Mitgliedsvariablen etwa
 Ergebnis
 --------
 
-	lokal: 0.0000011555
-	member: 0.0000012255
-	global: 0.0000011538
+siehe [data.md](data.md)
 
 Fazit
 -----

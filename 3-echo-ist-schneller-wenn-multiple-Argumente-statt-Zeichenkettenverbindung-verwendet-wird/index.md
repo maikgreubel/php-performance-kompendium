@@ -41,6 +41,10 @@ for($i = 0; $i < 10; $i++)
 foreach($zeiten as $zeit) echo $zeit;
 ?>
 ```
+Ergebnis
+--------
+
+siehe [data.md](data.md)
 
 Kommentar
 ---------

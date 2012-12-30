@@ -54,46 +54,8 @@ Unterschiedliche Messergebnisse können das prognostizierte Verhalten nicht wide
 
 Ergebnis
 --------
-	Zeit statisch 1: 0.00007
-	Zeit statisch 2: 0.00003
-	Zeit instanziiert 1: 0.00002
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00002
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00002
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
-	Zeit statisch 1: 0.00001
-	Zeit statisch 2: 0.00001
-	Zeit instanziiert 1: 0.00001
-	Zeit instanziiert 2: 0.00001
+
+siehe [data.md](data.md)
 
 Fazit
 -----

@@ -39,6 +39,12 @@ $tmp['proz']	= (( $tmp['len'] / $tmp['c']) - 1)*100 ;
 echo "<br>".$tmp['c']." | ".$tmp['len']." | ".$tmp['diff']." | ".$tmp['proz']."<br>";
 ?>
 ```
+
+Ergebnis
+--------
+
+siehe [data.md](data.md)
+
 Kommentar
 ---------
 isset() ist ein PHP Sprachkonstrukt ähnlich wie echo(), deshalb ist es von Haus aus schon mal etwas schneller als strlen().

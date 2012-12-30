@@ -157,11 +157,8 @@ Von "teuer" kann allerdings nicht die Rede sein.
 
 Ergebnis
 --------
-	Zeit expliziter require_once(): 0.00040889
-	Zeit expliziter require(): 0.00029302
-	Zeit expliziter include_once(): 0.00034404
-	Zeit expliziter include(): 0.00027394
 
+siehe [data.md](data.md)
 
 Fazit
 -----

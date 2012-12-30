@@ -52,36 +52,7 @@ Performance
 
 Das strtr immer 4 mal schneller ist als str_replace, ist ein Irrtum, wenn man die Resultate betrachtet.
 
-	Zeit preg_replace: 0.00033522
-	Zeit str_replace: 0.00002694
-	Zeit strtr: 0.00001001
-	Zeit preg_replace: 0.00001001
-	Zeit str_replace: 0.00000405
-	Zeit strtr: 0.00000405
-	Zeit preg_replace: 0.00000787
-	Zeit str_replace: 0.00000405
-	Zeit strtr: 0.00000691
-	Zeit preg_replace: 0.00000715
-	Zeit str_replace: 0.00000310
-	Zeit strtr: 0.00000405
-	Zeit preg_replace: 0.00000691
-	Zeit str_replace: 0.00000405
-	Zeit strtr: 0.00000381
-	Zeit preg_replace: 0.00001311
-	Zeit str_replace: 0.00000405
-	Zeit strtr: 0.00000286
-	Zeit preg_replace: 0.00000811
-	Zeit str_replace: 0.00000310
-	Zeit strtr: 0.00000405
-	Zeit preg_replace: 0.00000906
-	Zeit str_replace: 0.00000381
-	Zeit strtr: 0.00000405
-	Zeit preg_replace: 0.00000691
-	Zeit str_replace: 0.00000596
-	Zeit strtr: 0.00000310
-	Zeit preg_replace: 0.00000906
-	Zeit str_replace: 0.00000405
-	Zeit strtr: 0.00000405
+siehe [data.md](data.md)
 
 Fazit
 -----

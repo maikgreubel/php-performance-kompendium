@@ -48,27 +48,8 @@ Konstante Werte in der Abbruchbedingung beschleunigen die Prüfung.
 
 Ergebnis
 --------
-	Zeit for count max value: 0.00693
-	Zeit for fixed max value: 0.00377
-	Zeit for count max value: 0.00682
-	Zeit for fixed max value: 0.00305
-	Zeit for count max value: 0.00777
-	Zeit for fixed max value: 0.00330
-	Zeit for count max value: 0.00686
-	Zeit for fixed max value: 0.00391
-	Zeit for count max value: 0.00702
-	Zeit for fixed max value: 0.00385
-	Zeit for count max value: 0.00797
-	Zeit for fixed max value: 0.00293
-	Zeit for count max value: 0.00668
-	Zeit for fixed max value: 0.00290
-	Zeit for count max value: 0.00817
-	Zeit for fixed max value: 0.00302
-	Zeit for count max value: 0.00909
-	Zeit for fixed max value: 0.00305
-	Zeit for count max value: 0.00677
-	Zeit for fixed max value: 0.00281
 
+siehe [data.md](data.md)
 
 Fazit
 -----
