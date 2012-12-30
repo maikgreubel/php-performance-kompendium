@@ -1,4 +1,7 @@
 <?php
+require( BIN_FOLDER . '/classes/ColorCLI.php' );
+require( BIN_FOLDER . '/classes/Markdown.php' );
+
 function clean_test($file)
 {
 	$markdown = new Markdown();
