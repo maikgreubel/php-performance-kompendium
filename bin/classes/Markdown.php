@@ -265,6 +265,9 @@ class Markdown
 		$tmp = array();
 		for($i = 0; $i < count($this->data); $i++)
 		{
+			if(!isset($this->data[$i]))
+				throw new Exception("Internal statistics error: Index $i does not exists in data array");
+			
 			foreach($this->data[$i] as $key=>$element)
 			{
 				$tmp[$key][] = $element;
@@ -300,6 +303,10 @@ class Markdown
 		{
 			foreach($element as $a)
 			{
+				if(!is_numeric($a))
+				{
+					throw new Exception("Value ".(is_array($a) ? "'Array'" : $a)." is not a number!");
+				}
 				$local  += $a;
 			}
 			$local = ($local / $this->count);
@@ -324,7 +331,10 @@ class Markdown
 		{
 			foreach($tmp as $key=>$local)
 			{
-				 $result[$key] = $local[($this->count - 1)];
+				if(isset($local[($this->count - 1)]))
+					$result[$key] = $local[($this->count - 1)];
+				else
+					throw new Exception(" Index " . $this->count - 1 ." Does not exist in local data array");
 			}
 		}
 		else
@@ -353,6 +363,14 @@ class Markdown
 		{
 			return 0;
 		}
+	}
+	
+	public function clean()
+	{
+		if(file_exists($this->filename))
+			return unlink($this->filename);
+		
+		return 1;
 	}
 }
 ?>
