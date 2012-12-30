@@ -3,7 +3,7 @@
 error_reporting(0);
 $zeiten = array();
 $count = 100;
-for($i = 1; $i <= $count; $i++)
+for($i = 0; $i <= $count; $i++)
 {
 	$s = microtime(true);
 	$arry[id] = 'THIS IS AN VERY USELESS STRING';
