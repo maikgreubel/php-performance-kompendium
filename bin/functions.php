@@ -83,9 +83,7 @@ function run($args = null)
 	$subfolders = array();
 	while($fileinfo = readdir())
 	{
-		$fileinfo = str_replace('a¿', 'ä', $fileinfo);
-		//$abspath = realpath(TOP_FOLDER . '/' . $fileinfo);
-		$abspath = TOP_FOLDER . '/' . $fileinfo;
+		$abspath = realpath(TOP_FOLDER . '/' . $fileinfo);
 
 		if( $fileinfo == '.' || $fileinfo == '..' ||
 				$fileinfo == '.git' || $fileinfo == '.settings' ||
