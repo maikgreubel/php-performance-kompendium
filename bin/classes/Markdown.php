@@ -3,7 +3,7 @@
 * Autor: Leon Bergmann
 * Datum: 24.12.2012 12:50
 * Update: 25.12.2012 01:34 Uhr 
-* License: LICENSE.md
+* License: BSD (see https://github.com/skydevment/php-performance-tool/blob/master/LICENSE.md)
 * markdown class.
 */
 class Markdown
