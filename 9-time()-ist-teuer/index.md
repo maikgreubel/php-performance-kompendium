@@ -31,7 +31,7 @@ $markdown->write();
 ```
 Kommentar
 ---------
-Der Timestamp des Beginns der aktuellen Anfrage steht seit PHP 5.1 in der Variablen $_SERVER['REQUEST_TIME'] zur Verfügung. [1](de2.php.net/manual/de/function.time.php#refsect1-function.time-notes)
+Der Timestamp des Beginns der aktuellen Anfrage steht seit PHP 5.1 in der Variablen $_SERVER['REQUEST_TIME'] zur Verfügung. [1](http://de3.php.net/manual/de/function.time.php#refsect1-function.time-notes)
 
 Performance
 -----------
