@@ -3,7 +3,7 @@ README
 ---
 Dieses Kompendium dient der Sammlung von Tipps und Tricks zu Aspekten der Performance in PHP-Applikationen.
 
-Die Grundlage für das Kompendium ist eine Liste von Best-Practices zu finden auf [http://www.chazzuka.com/63-best-practice-to-optimize-php-code-performances-58/](http://www.chazzuka.com/63-best-practice-to-optimize-php-code-performances-58/)
+Die Grundlage für das Kompendium ist eine Liste von Best-Practices zu finden auf [https://web.archive.org/web/20131227101133/http://www.chazzuka.com/63-best-practice-to-optimize-php-code-performances-58/](https://web.archive.org/web/20131227101133/http://www.chazzuka.com/63-best-practice-to-optimize-php-code-performances-58/)
 
 
 Lizenz-Fragen
